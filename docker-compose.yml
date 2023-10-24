@@ -14,9 +14,9 @@ services:
     image: mysql:latest
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: qmsc
-      MYSQL_USER: qmsc_root
-      MYSQL_PASSWORD: qmsc_pass
+      MYSQL_DATABASE: admin
+      MYSQL_USER: admin_root
+      MYSQL_PASSWORD: admin_pass
     volumes:
       - ./database/init:/docker-entrypoint-initdb.d
     ports:
