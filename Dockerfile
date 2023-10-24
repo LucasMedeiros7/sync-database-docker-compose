@@ -6,8 +6,7 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
 
 WORKDIR /app
 
-COPY package*.json .
-COPY index.js .
+COPY app/ .
 COPY scripts/wait-db.sh .
 
 RUN npm install
