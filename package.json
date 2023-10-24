@@ -1,0 +1,16 @@
+{
+  "name": "dumpsql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mysql2": "^3.6.2",
+    "mysql2-promise": "^0.1.4"
+  }
+}

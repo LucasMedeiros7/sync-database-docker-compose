@@ -1,0 +1,24 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: app
+    restart: always
+    ports:
+      - '3000:3000'
+    depends_on:
+      - db
+  db:
+    container_name: mysql_db
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: qmsc
+      MYSQL_USER: qmsc_root
+      MYSQL_PASSWORD: qmsc_pass
+    volumes:
+      - ./database/init:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
+    restart: always
